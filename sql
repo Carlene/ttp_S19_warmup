@@ -89,5 +89,15 @@ WHERE
 
 -- Get the emails of all customers that shop at store 1 that are inactive (use 'active')
 
+SELECT 
+	email
+
+FROM
+	customer
+
+WHERE
+	store_id = 1
+	AND active != 1;
+
 --How much have these customers spent? (Use code from the previous query to
 -- make a subquery or a CTE to solve this one.) 
