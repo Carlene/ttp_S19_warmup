@@ -22,7 +22,21 @@ WHERE
 -- What is the title and ID of the film with the lowest replacement cost?
 -- BONUS points if you use a subquery :) 
 
+SELECT
+	title
+	,film_id
 
+FROM 
+	film
+
+WHERE
+	replacement_cost <=
+	(SELECT
+		min(replacement_cost)
+
+	FROM 
+		film
+	)
 
 
 -- What is the tile and ID of the film with the highest rental_rate?
