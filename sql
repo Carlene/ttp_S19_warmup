@@ -77,6 +77,16 @@ WHERE
 
 -- Show all payment ID's and payment date's with a transaction amount less than $3.
 
+SELECT
+	payment_id
+	,payment_date
+
+FROM
+	payment
+
+WHERE
+	amount < 3;
+
 -- Get the emails of all customers that shop at store 1 that are inactive (use 'active')
 
 --How much have these customers spent? (Use code from the previous query to
