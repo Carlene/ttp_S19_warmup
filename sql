@@ -3,8 +3,27 @@
 -- What's the title and ID of the longest film?
 -- BONUS points if you use a subquery :) 
 
+SELECT
+	title
+	,film_id
+
+FROM 
+	film
+
+WHERE
+	length>=
+	(SELECT
+		max(length)
+
+	FROM 
+		film
+	)
+
 -- What is the title and ID of the film with the lowest replacement cost?
 -- BONUS points if you use a subquery :) 
+
+
+
 
 -- What is the tile and ID of the film with the highest rental_rate?
 
