@@ -11,7 +11,7 @@ FROM
 	film
 
 WHERE
-	length>=
+	length =
 	(SELECT
 		max(length)
 
@@ -30,7 +30,7 @@ FROM
 	film
 
 WHERE
-	replacement_cost <=
+	replacement_cost =
 	(SELECT
 		min(replacement_cost)
 
@@ -40,6 +40,22 @@ WHERE
 
 
 -- What is the tile and ID of the film with the highest rental_rate?
+
+SELECT
+	title
+	,film_id
+
+FROM 
+	film
+
+WHERE
+	rental_rate =
+	(SELECT
+		max(rental_rate)
+
+	FROM 
+		film
+	)
 
 -- Show the payment_id's of all transactions after or on May 1st 2007
 
