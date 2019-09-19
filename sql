@@ -59,6 +59,22 @@ WHERE
 
 -- Show the payment_id's of all transactions after or on May 1st 2007
 
+
+SELECT
+	payment_id
+
+FROM
+	payment
+
+WHERE
+	payment_date > '2007-05-01'
+	AND payment_date = (SELECT
+			max(payment_date)
+
+		FROM 
+			payment);
+
+
 -- Show all payment ID's and payment date's with a transaction amount less than $3.
 
 -- Get the emails of all customers that shop at store 1 that are inactive (use 'active')
